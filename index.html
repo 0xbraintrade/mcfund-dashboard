@@ -166,10 +166,10 @@ const CAP = 200000;
 // ADD TRADES HERE
 // ═══════════════════════════════════════
 const TRADES = [
-  // { id:1, coin:'BTC', side:'LONG', size:100000, lev:1, entry:66500, exit:68000,
-  //   opened: new Date('2026-02-27T10:00:00Z').getTime(),
-  //   closed: new Date('2026-02-27T18:00:00Z').getTime(),
-  //   pnl: 2256, result:'WIN' },
+  { id:1, coin:'BTC', side:'LONG', size:198000, lev:1, entry:66000, exit:69000,
+    opened: new Date('2026-02-06T10:00:00Z').getTime(),
+    closed: new Date('2026-02-06T18:00:00Z').getTime(),
+    pnl: 9000, result:'WIN' },
 ];
 
 const activeTrades = [
@@ -181,7 +181,7 @@ const activeTrades = [
 let prices = {};
 
 function buildCurve() {
-  const c = [{ t: new Date('2026-02-27T00:00:00Z').getTime(), v: CAP }];
+  const c = [{ t: new Date('2026-02-05T00:00:00Z').getTime(), v: CAP }];
   let cum = 0;
   TRADES.forEach(t => {
     c.push({ t: t.opened, v: CAP + cum });
